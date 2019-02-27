@@ -1,0 +1,35 @@
+
+    <% include  ../partials/header %>
+
+
+    <div class="local_shops">   
+        <h1>Events</h1>
+        
+        <% include  ../partials/navbar %>
+        
+        <div class="shop_container">    
+            <a class="btn btn-primary" href="/localshops/new" role="button">Add Event</a>
+            <br>
+            <% events.forEach((event) => {%>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= event.image %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= event.name %></h5>
+                        <p class="card-text"><%= event.service %></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><%= event.address %></li>
+                        <li class="list-group-item"><%= event.website %></li>
+                    </ul>
+                    <p>
+                      <a href="/events/<%= event._id %>" class="btn btn-primary">More info</a>
+                    </p>
+                </div>
+            <%})%>   
+        </div>
+    </div>
+    
+    
+    
+    
+    <% include  ../partials/footer %>

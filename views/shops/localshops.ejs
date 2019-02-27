@@ -1,0 +1,36 @@
+<% include  ../partials/header %>
+
+
+<div class="local_shops">   
+    <h1>SHOPS</h1>
+    
+    <% include  ../partials/navbar %>
+    
+    <div class="shop_container">    
+        <a class="btn btn-primary" href="/localshops/new" role="button">Add Shop</a>
+        <br>
+        <% shops.forEach((shop) => {%>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="<%= shop.image %>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><%= shop.name %></h5>
+                    <p class="card-text"><%= shop.service %></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><%= shop.address %></li>
+                    <li class="list-group-item"><%= shop.phone %></li>
+                </ul>
+                <p>
+                  <a href="/localshops/<%= shop._id %>" class="btn btn-primary">More info</a>
+                </p>
+            </div>
+        <%})%>   
+    </div>
+</div>
+
+
+
+
+<% include  ../partials/footer %>
+
+

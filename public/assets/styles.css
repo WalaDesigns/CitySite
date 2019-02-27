@@ -1,0 +1,121 @@
+html, body {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.landing {
+    overflow: hidden;
+}
+
+.local_shops {
+    overflow-x:hidden;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    /*---------  Landing Page  ------------*/
+    .landing > .menu-listing {
+        margin: 50px 5px 100px 60px;
+        display: flex;
+        justify-content: right;
+        flex-direction: column;
+    }
+
+    .landing > h1 {
+        position: absolute;
+        top: 250px; 
+        left: -200px;
+        transform: matrix(0, -1, 1, 0, 0, 0);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        width: 500px;
+        color: gray;
+    }
+
+    .landing > .menu-listing > a {
+        font-family: 'Lato', sans-serif; 
+        font-size: 4rem;
+        font-weight: 700;
+        color: #ffcc02;
+        text-decoration: none;
+        padding: 0;
+        margin-left: 15px;
+        height: 60px;
+    }
+    
+    .landing > .menu-listing > a:active {
+        color: #f59300;
+        text-decoration: none;
+    }
+
+
+    /*---------  Local Shops Page  ------------*/
+    .local_shops > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .local_shops > div > nav {
+        margin: 15px auto 15px auto;
+    }
+    
+    .local_shops > nav {
+        border: black 3px solid;
+    }
+
+    .local_shops > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 100px;
+        color: #ffcc02;
+        margin: 0 auto;
+    }
+
+    /* CARD */
+    .local_shops > .shop_container > .card > img {
+        width: 100%;
+    }
+
+    .local_shops > .shop_container > .card {
+        margin: 10px auto 25px auto;
+    }
+}
+
+
+
+    /*---------  Events Page  ------------*/
+    .events > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .events > div > nav {
+        margin: 15px auto 15px auto;
+    }
+    
+    .events > nav {
+        border: black 3px solid;
+    }
+
+    .events > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 100px;
+        color: #ffcc02;
+        margin: 0 auto;
+    }
+
+    /* CARD */
+    .events > .shop_container > .card > img {
+        width: 100%;
+    }
+
+    .events > .shop_container > .card {
+        margin: 10px auto 25px auto;
+    }
+}

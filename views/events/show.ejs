@@ -1,0 +1,21 @@
+<% include  ../partials/header %>
+
+<h1>This is <%= events.name %></h1>
+<% include  ../partials/navbar %>
+
+<p>
+    <a class="btn btn-success" href="/events/<%=events.id%>/comments/new">Add new comment</a>
+</p>
+
+<img src="<%= events.image %>">
+
+<%= events.comments %>
+
+<% events.comments.map(comment => { %>
+    <p>
+        <%= comment.author %> - <%= comment.text %>
+    </p>
+<% }) %>
+
+
+<% include  ../partials/footer %>
