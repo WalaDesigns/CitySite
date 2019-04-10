@@ -3,39 +3,62 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <p class="lead">El Cajon City Social App</p>
-            <div class="list-group">
-                <li class="list-group-item active">Item 1</li>
+            <p class="lead menu-label">El Cajon City Social App</p>
+            <ul class="menu-list">
+                <li class="list-group-item is-active">Item 1</li>
                 <li class="list-group-item">Item 2</li>
                 <li class="list-group-item">Item 3</li>
                 <li class="list-group-item disabled">Item 4</li>
             </div>
         </div>
-        <div class="col-md-9">
-            <figure class="figure">
+        <article class="media">
+            <figure class="media-left">
                 <img src="<%= shops.image %>" class="img img-fluid rounded" >
+            </figure>
+            <div class="media-content right">
                 <figcaption class="caption"><a><%= shops.name %></a></figcaption>
                 <figcaption class="caption"><a>$9.00/night</a></figcaption>
                 <figcaption class="caption"><a><%= shops.service %></a></figcaption>
-            </figure>
-            
-            <div class="card">
-                <div class="text-right">
-                    <a class="btn btn-success" href="/localshops/<%=shops.id%>/comments/new">Add new comment</a>
-                </div>
-                <% shops.comments.forEach(function(comment) { %>
-                    <div class="row">
-                        <div class="col-md-12 card-subtitle">
-                            <%= comment.author %>
-                            <span class="text-right">10 days ago</span>
-                        </div>
-                        <p>
-                            <%= comment.text %>
-                        </p>
-                    </div>
-                <% }) %>
             </div>
-        </div>
+        </article>
+        <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <% shops.comments.forEach(function(comment) { %>
+                        <p>
+                            <strong><%= comment.author %></strong>
+                            <br>
+                            <%= comment.text %>
+                            <br>
+                            <small><a>Like</a> · <a>Reply</a> 10 days ago</small>
+                        </p>
+                    <% }) %>
+                  </div>  
+        </article>              
+        <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="field">
+                    <p class="control">
+                      <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button">Post comment</button>
+                    </p>
+                  </div>
+                </div>
+        </article>
     </div>
 </div>
 
